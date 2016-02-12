@@ -10,10 +10,10 @@
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: em(1100px);
+    max-width: em(1025px);
 }
 
-.row.uncontained {
+.row--uncontained {
     max-width: 100%;
 }
 
@@ -88,8 +88,8 @@
 
 .column,
 .columns {
-    padding-left: em(20px);
-    padding-right: em(20px);
+    padding-left: em($gutter);
+    padding-right: em($gutter);
     width: 100%;
     float: left;
 }
@@ -226,8 +226,8 @@
     .column,
     .columns {
         position: relative;
-        padding-left: em(20px);
-        padding-right: em(20px);
+        padding-left: em($gutter);
+        padding-right: em($gutter);
         float: left;
     }
     .small-1 {
@@ -344,8 +344,8 @@
     }
     .row.small-uncollapse > .column,
     .row.small-uncollapse > .columns {
-        padding-left: em(20px);
-        padding-right: em(20px);
+        padding-left: em($gutter);
+        padding-right: em($gutter);
         float: left;
     }
 }
@@ -474,8 +474,8 @@
     .column,
     .columns {
         position: relative;
-        padding-left: em(20px);
-        padding-right: em(20px);
+        padding-left: em($gutter);
+        padding-right: em($gutter);
         float: left;
     }
     .medium-1 {
@@ -592,8 +592,8 @@
     }
     .row.medium-uncollapse > .column,
     .row.medium-uncollapse > .columns {
-        padding-left: em(20px);
-        padding-right: em(20px);
+        padding-left: em($gutter);
+        padding-right: em($gutter);
         float: left;
     }
     .push-0 {
@@ -842,8 +842,8 @@
     .column,
     .columns {
         position: relative;
-        padding-left: em(20px);
-        padding-right: em(20px);
+        padding-left: em($gutter);
+        padding-right: em($gutter);
         float: left;
     }
     .large-1 {
@@ -960,8 +960,8 @@
     }
     .row.large-uncollapse > .column,
     .row.large-uncollapse > .columns {
-        padding-left: em(20px);
-        padding-right: em(20px);
+        padding-left: em($gutter);
+        padding-right: em($gutter);
         float: left;
     }
     .push-0 {
@@ -1087,15 +1087,15 @@
 }
 
 .panel {
-    // margin: 20px 0 0 0;
-    padding: 20px;
+    // margin: $gutter 0 0 0;
+    padding: $gutter;
     position: relative;
 }
 
 [class*="block-grid-"] {
     display: block;
     padding: 0;
-    margin: 0 -em(20px);;
+    margin: 0 -em($gutter);;
 }
 
 [class*="block-grid-"]:before, [class*="block-grid-"]:after {
@@ -1111,7 +1111,7 @@
     display: block;
     height: auto;
     float: left;
-    padding: em(20px);
+    padding: em($gutter);
 }
 
 @media only screen {

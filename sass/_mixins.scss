@@ -45,49 +45,6 @@
     border-radius: $radius;
 }
 
-@mixin transition($args, $args2) {
-    -webkit-transition: $args $args2;
-    -moz-transition: $args $args2;
-    -o-transition: $args $args2;
-    -ms-transition: $args $args2;
-    transition: $args $args2;
-}
-
-@mixin gradient($top, $bottom) {
-    background: -webkit-gradient(linear, left top, right top, from($top), to($bottom));
-    background: -webkit-linear-gradient(top, $top, $bottom);
-    background: -moz-linear-gradient(top, $top, $bottom);
-    background: -o-linear-gradient(top, $top, $bottom);
-    background: -ms-linear-gradient(top, $top, $bottom);
-    background: linear-gradient(top, $top, $bottom);
-}
-
-@mixin b-shadow($value, $color) {
-    -webkit-box-shadow: $value $color;
-    -moz-box-shadow: $value $color;
-    -o-box-shadow: $value $color;
-    -ms-box-shadow: $value $color;
-    box-shadow: $value $color;
-}
-
-@mixin user-select-none {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-@mixin at2x($path, $ext: "jpg") {
-    $at1x_path: "#{$path}.#{$ext}";
-    $at2x_path: "#{$path}@2x.#{$ext}";
-    background-image: url(#{$at1x_path});
-    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-        background-image: url(#{$at2x_path});
-        // background-size: $w $h;
-    }
-}
-
 // Covert px to em
 @function em($px, $base: $base-font-size) {
     @return $px / $base * 1em;

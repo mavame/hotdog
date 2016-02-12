@@ -1,8 +1,20 @@
-$base-font-size: 15px;
+// Sizes
+$base-font-size: 16px;
+$base-line-height: 29px;
+
+// Fonts
+$base-font: "ProximaNova", "Montserrat", sans-serif;
+$heading-font: "Bebas", sans-serif;
+$reset-font: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 // colors
 $yellow: #ffff01;
 $pink: #d46b55;
+$black: #2e2e2e;
+$white: #ffffff;
+
+// grid
+$gutter: 25px;
 
 // breakpoints
 $medium: 45;

@@ -1,52 +1,25 @@
-html {
-  font-size: 100%;
-  @include box; }
+.u-hidden-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	text-decoration: none !important;
+}
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
+.site-header {
+	border-bottom: 11px solid $yellow;
+	& > .row {
+		padding: 2rem 0;
+	}
+}
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #222222;
-  background: #fefefe;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-img {
-  max-width: 100%;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
-  display: inline-block;
-  vertical-align: middle; }
-
- .u-hidden-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
-    text-decoration: none !important;
- }
-
- .site-header {
- 	border-bottom: 11px solid $yellow;
- 	& > .row {
- 		padding: 2rem 0;
- 	}
- }
-
- .site-header__logo {
- 	text-align: center;
- 	@include break($medium) {
- 		text-align: left;
- 	}
- }
+.site-header__logo {
+	text-align: center;
+	@include break($medium) {
+		text-align: left;
+	}
+}
 
 .site-header__nav {
 	padding-top: 1rem;
@@ -56,21 +29,14 @@ img {
 	}
  	ul {
  		margin: 0;
- 		li {
- 			display: inline-block;
- 			list-style: none;
- 			font-size: 1.5rem;
- 			margin-left: 2rem;
- 			a {
- 				font-family: 'Bebas', sans-serif;
- 				text-transform: uppercase;
- 			}
- 		}
- 	}
-}
-
-.main-content {
-	position: relative;
+	}
+	li {
+		display: inline-block;
+		font-size: rem(24px);
+		margin-left: 30px;
+		font-family: $heading-font;
+		text-transform: uppercase;
+	}
 }
 
 .main-content__hero {
@@ -83,4 +49,10 @@ img {
 	@include break($large) {
 		min-height: 481px;
 	}
+}
+
+.middle-grid__inner {
+	border: 1px solid $yellow;
+	text-align: center;
+	padding: em($gutter);
 }
