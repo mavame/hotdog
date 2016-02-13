@@ -38,7 +38,7 @@ p.text--label {
 }
 
 .site-header__nav {
-	padding-top: 1rem;
+	padding-top: 2rem;
 	text-align: center;
 	@include break($medium) {
 		text-align: right;
@@ -69,12 +69,16 @@ p.text--label {
 
 .middle-about {
 	p {
-		font-size: 3rem;
 		line-height: 1.2em;
 		text-align: center;
 		font-family: $reset-font;
 		font-weight: bold;
-		margin: 4rem 0;
+		font-size: 2rem;
+		margin: 2rem 0;
+		@include break($medium) {
+			font-size: 3rem;
+			margin: 4rem 0;
+		}
 	}
 	.dots {
 		text-align: center;

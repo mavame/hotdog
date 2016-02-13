@@ -1711,7 +1711,7 @@ p.text--label {
 }
 
 .site-header__nav {
-  padding-top: 1rem;
+  padding-top: 2rem;
   text-align: center;
 }
 
@@ -1752,12 +1752,19 @@ p.text--label {
 }
 
 .middle-about p {
-  font-size: 3rem;
   line-height: 1.2em;
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: bold;
-  margin: 4rem 0;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 45em) {
+  .middle-about p {
+    font-size: 3rem;
+    margin: 4rem 0;
+  }
 }
 
 .middle-about .dots {
