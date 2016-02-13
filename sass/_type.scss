@@ -20,8 +20,11 @@ html, body {
 
 body {
     font-family: $base-font;
-    line-height: $base-line-height;
-    font-size: 1em;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: $black;
+  	background: $white;
+  	letter-spacing: 1px;
 }
 
 /* Default header styles */
@@ -30,14 +33,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     font-style: normal;
     color: inherit;
-    margin: 0.15em 0;
-    line-height: 1;
+    margin: 0.5rem 0 1rem;
 }
 
 h2 {
-    font-size: em(35px);
+    font-size: rem(20px);
     @include break($medium) {
-        font-size: em(40px);
+        font-size: rem(30px);
+    }
+}
+
+h4 {
+    font-size: 1rem;
+    @include break($medium) {
+        font-size: 1.1rem;
     }
 }
 
@@ -61,23 +70,11 @@ a img {
 p {
     font-family: inherit;
     font-weight: normal;
-    font-size: $base-font-size;
-    margin-bottom: 1em;
+    margin: rem($gutter) 0;
     text-rendering: optimizeLegibility;
     color: inherit;
 }
 
 ul, li {
     font-size: $base-font-size;
-}
-
-h4 {
-    font-size: 1em;
-    @include break($medium) {
-        font-size: 1.1em;
-    }
-}
-
-.text--spaced {
-	letter-spacing: 0.6em;
 }
