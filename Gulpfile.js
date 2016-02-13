@@ -1,27 +1,24 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass        = require('gulp-sass');
 
-// toggle to change sass output style
-var env = 'dev';
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
 
-var sassOptions = {
-	outputStyle : env === 'dev' ? 'expanded' : 'compressed'
-}
+    browserSync.init({
+        server: "./"
+    });
 
-// Compile SASS
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    gulp.watch("./sass/**/*.scss", ['sass']);
+    gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-// Watch
-gulp.task('watch', function() {
-	return gulp.watch('./sass/**/*.scss', ['sass'])
-		.on('change', function(event) {
-			console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-		});
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("./sass/**/*.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("./css"))
+        .pipe(browserSync.stream());
 });
 
-// Default
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['serve']);
