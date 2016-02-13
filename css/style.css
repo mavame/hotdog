@@ -1757,6 +1757,7 @@ p.text--label {
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: bold;
+  margin: 4rem 0;
 }
 
 .middle-about .dots {
@@ -1789,6 +1790,11 @@ p.text--label {
   border-color: #d46b55;
 }
 
+.middle-grid {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .middle-grid__inner {
   text-align: center;
   padding: 1.66667em;
@@ -1801,7 +1807,6 @@ p.text--label {
   border-radius: 3px;
   min-height: 292px;
   position: relative;
-  margin: 4rem 0;
 }
 
 .middle-grid__inner.middle-grid__inner--call-us .text--lighter {

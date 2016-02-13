@@ -74,6 +74,7 @@ p.text--label {
 		text-align: center;
 		font-family: $reset-font;
 		font-weight: bold;
+		margin: 4rem 0;
 	}
 	.dots {
 		text-align: center;
@@ -99,6 +100,11 @@ p.text--label {
 	}
 }
 
+.middle-grid {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
 .middle-grid__inner {
 	text-align: center;
 	padding: em($gutter);
@@ -107,7 +113,6 @@ p.text--label {
 	@include border-radius(3px);
 	min-height: 292px;
 	position: relative;
-	margin: 4rem 0;
 
 	&.middle-grid__inner--call-us {
 		.text--lighter {
