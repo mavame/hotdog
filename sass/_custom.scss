@@ -15,6 +15,13 @@ p.text--label {
 	margin-bottom: 0;
 }
 
+.text--hidden {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
 .tag--reset-margin {
 	margin: 0;
 }
@@ -115,22 +122,26 @@ p.text--label {
 	margin-bottom: rem($gutter);
 	border: 3px solid $yellow-darker;
 	@include border-radius(3px);
-	min-height: 292px;
+	min-height: 410px;
 	position: relative;
+	padding-top: 144px;
 
 	&.middle-grid__inner--call-us {
+		background: url(/img/phone.svg) no-repeat center 30px;
 		.text--lighter {
 			font-size: rem(22px);
 		}
 	}
 
 	&.middle-grid__inner--hours {
+		background: url(/img/clock.svg) no-repeat center 30px;
 		.tag--reset-margin + p {
 			margin-top: 0;
 		}
 	}
 
 	&.middle-grid__inner--location {
+		background: url(/img/hotdog.svg) no-repeat center 30px;
 		a.cta {
 			position: absolute;
 			bottom: 0;
@@ -151,8 +162,32 @@ p.text--label {
 
 .site-footer {
 	background-color: $light-gray;
-	color: $dark-gray;
 	font-size: rem(12px);
 	border-top: 1px solid $gray;
 	padding-top: 20px;
+	&, a {
+		color: $dark-gray;
+	}
+}
+
+.social-icons {
+	li {
+		display: inline-block;
+	}
+	.social-icon {
+		width: 16px;
+		height: 16px;
+		background: url(/img/social.png) no-repeat 0 0;
+	}
+
+	.social-icon.social-icon--facebook:hover {
+		background-position: 0 -21px;
+	}
+
+	.social-icon.social-icon--instagram {
+		background-position: -18px 0;
+		&:hover {
+			background-position: -18px -21px;
+		}
+	}
 }
