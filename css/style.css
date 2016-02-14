@@ -1301,10 +1301,11 @@ p.text--label {
 .site-header {
   border-bottom: 11px solid #ffff01; }
   .site-header > .row {
-    padding: 2rem 0; }
+    padding: 0.5rem 0; }
 
 .site-header__logo {
-  text-align: center; }
+  text-align: center;
+  padding-top: 1rem; }
   @media screen and (min-width: 45em) {
     .site-header__logo {
       text-align: left; } }
@@ -1323,6 +1324,16 @@ p.text--label {
     margin-left: 2rem;
     font-family: "Bebas", sans-serif;
     text-transform: uppercase; }
+
+.main-content .instagram {
+  text-align: center;
+  display: block;
+  margin-top: 1.66667em; }
+  .main-content .instagram a {
+    color: #3a3b55;
+    display: inline-block; }
+  .main-content .instagram .social-icon {
+    background-position: -18px -21px; }
 
 .main-content__hero {
   background: url(../img/homepage.png) no-repeat center;
@@ -1413,24 +1424,32 @@ p.text--label {
 
 .site-footer {
   background-color: #efefef;
-  font-size: 0.8rem;
   border-top: 1px solid #e9e9e9;
-  padding-top: 20px; }
+  padding: 20px 0; }
   .site-footer, .site-footer a {
     color: #9a9494; }
+  .site-footer .columns {
+    font-size: 0.8rem; }
+  .site-footer .site-footer__address {
+    text-align: right; }
+    .site-footer .site-footer__address span {
+      padding: 0 0.55556em; }
 
+.social-icons,
 .social-icons li {
   display: inline-block; }
 
-.social-icons .social-icon {
+.social-icon {
   width: 16px;
   height: 16px;
-  background: url(/img/social.png) no-repeat 0 0; }
+  background: url(/img/social.png) no-repeat 0 0;
+  display: inline-block;
+  vertical-align: middle; }
 
-.social-icons .social-icon.social-icon--facebook:hover {
+.social-icon.social-icon--facebook:hover {
   background-position: 0 -21px; }
 
-.social-icons .social-icon.social-icon--instagram {
+.social-icon.social-icon--instagram {
   background-position: -18px 0; }
-  .social-icons .social-icon.social-icon--instagram:hover {
+  .social-icon.social-icon--instagram:hover {
     background-position: -18px -21px; }

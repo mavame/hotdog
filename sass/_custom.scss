@@ -33,12 +33,13 @@ p.text--label {
 .site-header {
 	border-bottom: 11px solid $yellow;
 	& > .row {
-		padding: 2rem 0;
+		padding: 0.5rem 0;
 	}
 }
 
 .site-header__logo {
 	text-align: center;
+	padding-top: 1rem;
 	@include break($medium) {
 		text-align: left;
 	}
@@ -59,6 +60,19 @@ p.text--label {
 		margin-left: rem(30px);
 		font-family: $heading-font;
 		text-transform: uppercase;
+	}
+}
+
+.main-content .instagram {
+	text-align: center;
+	display: block;
+	margin-top: em($gutter);
+	a {
+		color: $purple;
+		display: inline-block;
+	}
+	.social-icon {
+		background-position: -18px -21px;
 	}
 }
 
@@ -162,32 +176,44 @@ p.text--label {
 
 .site-footer {
 	background-color: $light-gray;
-	font-size: rem(12px);
 	border-top: 1px solid $gray;
-	padding-top: 20px;
+	padding: 20px 0;
 	&, a {
 		color: $dark-gray;
+	}
+	.columns {
+		font-size: rem(12px);
+	}
+	.site-footer__address {
+		text-align: right;
+		span {
+			padding: 0 em($gutter/3);
+		}
 	}
 }
 
 .social-icons {
+	&,
 	li {
 		display: inline-block;
 	}
-	.social-icon {
-		width: 16px;
-		height: 16px;
-		background: url(/img/social.png) no-repeat 0 0;
-	}
+}
 
-	.social-icon.social-icon--facebook:hover {
-		background-position: 0 -21px;
-	}
+.social-icon {
+	width: 16px;
+	height: 16px;
+	background: url(/img/social.png) no-repeat 0 0;
+	display: inline-block;
+	vertical-align: middle;
+}
 
-	.social-icon.social-icon--instagram {
-		background-position: -18px 0;
-		&:hover {
-			background-position: -18px -21px;
-		}
+.social-icon.social-icon--facebook:hover {
+	background-position: 0 -21px;
+}
+
+.social-icon.social-icon--instagram {
+	background-position: -18px 0;
+	&:hover {
+		background-position: -18px -21px;
 	}
 }
